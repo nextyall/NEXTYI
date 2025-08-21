@@ -1,29 +1,38 @@
-const qrcode = require('qrcode-terminal');
 const { Client, LocalAuth } = require('whatsapp-web.js');
-const puppeteer = require('puppeteer-core');
+const qrcode = require('qrcode-terminal');
+const express = require('express');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// WhatsApp client
 const client = new Client({
-    authStrategy: new LocalAuth(),
-    puppeteer: {
-        executablePath: process.env.CHROME_BIN || '/app/.apt/usr/bin/google-chrome-stable',
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    }
+    authStrategy: new LocalAuth()
 });
 
 client.on('qr', qr => {
     qrcode.generate(qr, { small: true });
-    console.log('QR Code received, scan please!');
+    console.log('Scan this QR code!');
 });
 
 client.on('ready', () => {
-    console.log('Client is ready!');
+    console.log('WhatsApp client is ready!');
 });
 
-client.on('message', msg => {
-    if (msg.body === 'ping') {
-        msg.reply('pong');
+client.on('message', message => {
+    if(message.body === 'ping') {
+        message.reply('pong');
     }
 });
 
+// Start WhatsApp client
 client.initialize();
+
+// Express server to keep Heroku dyno alive
+app.get('/', (req, res) => {
+    res.send('WhatsApp bot is running!');
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
