@@ -4,9 +4,8 @@
   "repository": "https://github.com/nextyall/NEXTYI",
   "stack": "heroku-22",
   "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
+    { "url": "heroku/nodejs" },
+    { "url": "https://github.com/heroku/heroku-buildpack-apt" }
   ],
   "env": {
     "SESSION_DATA": {
