@@ -3,12 +3,7 @@
   "description": "A WhatsApp bot with multiple features",
   "repository": "https://github.com/nextyall/NEXTYI",
   "logo": "https://telegra.ph/file/64c4e67f38e76dcabead8.jpg",
-  "keywords": [
-    "whatsapp",
-    "bot",
-    "nodejs",
-    "heroku"
-  ],
+  "keywords": ["whatsapp", "bot", "nodejs", "heroku"],
   "buildpacks": [
     {
       "url": "heroku/nodejs"
