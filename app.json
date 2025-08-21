@@ -1,0 +1,32 @@
+{
+  "name": "WhatsApp Bot",
+  "description": "A WhatsApp bot with multiple features",
+  "repository": "https://github.com/nextyall/NEXTYI",
+  "logo": "https://telegra.ph/file/64c4e67f38e76dcabead8.jpg",
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "nodejs",
+    "heroku"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    }
+  ],
+  "env": {
+    "SESSION_ID": {
+      "description": "Your WhatsApp session ID",
+      "value": "my-bot-session",
+      "required": true
+    },
+    "NODE_ENV": {
+      "description": "Environment type",
+      "value": "production",
+      "required": true
+    }
+  }
+}
