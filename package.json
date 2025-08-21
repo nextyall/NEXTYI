@@ -1,11 +1,10 @@
 {
   "name": "whatsapp-bot",
   "version": "1.0.0",
-  "description": "WhatsApp Bot with Session ID",
+  "description": "WhatsApp Bot with features",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "session": "node session.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
