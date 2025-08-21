@@ -20,4 +20,8 @@
       "size": "Free"
     }
   },
-  "
+  "addons": [],
+  "scripts": {
+    "postdeploy": "echo \"Bot deployed successfully!\""
+  }
+}
