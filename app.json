@@ -2,7 +2,7 @@
   "name": "whatsapp-bot-nexty",
   "description": "Stylish WhatsApp bot with menu, voice note, forward, ping, jid",
   "repository": "https://github.com/nextyall/NEXTYI",
-  "stack": "heroku-20",
+  "stack": "heroku-22",
   "buildpacks": [
     {
       "url": "heroku/nodejs"
@@ -20,8 +20,4 @@
       "size": "Free"
     }
   },
-  "addons": [],
-  "scripts": {
-    "postdeploy": "echo 'Bot deployed successfully!'"
-  }
-}
+  "
