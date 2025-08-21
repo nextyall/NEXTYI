@@ -1,0 +1,18 @@
+{
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot with features",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.18.4",
+    "qrcode-terminal": "^0.12.0",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
