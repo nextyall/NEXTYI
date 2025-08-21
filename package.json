@@ -1,5 +1,5 @@
 {
-  "name": "whatsapp-bot",
+  "name": "whatsapp-bot-nexty",
   "version": "1.0.0",
   "description": "Stylish WhatsApp bot with menu, voice note, forward, ping, jid",
   "main": "app.js",
@@ -15,6 +15,5 @@
   "engines": {
     "node": "20.x"
   },
-  "author": "",
   "license": "MIT"
 }
