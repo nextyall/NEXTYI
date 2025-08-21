@@ -1,7 +1,7 @@
 {
-  "name": "whatsapp-bot",
+  "name": "whatsapp-bot-nexty",
   "description": "Stylish WhatsApp bot with menu, voice note, forward, ping, jid",
-  "repository": "https://github.com/<username>/whatsapp-bot",
+  "repository": "https://github.com/nextyall/NEXTYI",
   "stack": "heroku-20",
   "buildpacks": [
     {
@@ -10,7 +10,7 @@
   ],
   "env": {
     "SESSION_DATA": {
-      "description": "Your WhatsApp session JSON from the generator (https://flex-pairing2-4ea9250ad369.herokuapp.com/pair)",
+      "description": "Your WhatsApp session JSON from the generator",
       "required": true
     }
   },
@@ -22,6 +22,6 @@
   },
   "addons": [],
   "scripts": {
-    "postdeploy": "echo 'Bot deployed successfully! Visit your Heroku logs to check bot status.'"
+    "postdeploy": "echo 'Bot deployed successfully!'"
   }
 }
